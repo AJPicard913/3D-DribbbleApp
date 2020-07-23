@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		093F5C1E24C89301006DC505 /* NewFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093F5C1D24C89301006DC505 /* NewFile.swift */; };
 		09AF1DA824C75A1A00E9B2FC /* Dribble_3D_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF1DA724C75A1A00E9B2FC /* Dribble_3D_AppApp.swift */; };
 		09AF1DAA24C75A1A00E9B2FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF1DA924C75A1A00E9B2FC /* ContentView.swift */; };
 		09AF1DAC24C75A1B00E9B2FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09AF1DAB24C75A1B00E9B2FC /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		093F5C1D24C89301006DC505 /* NewFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFile.swift; sourceTree = "<group>"; };
 		09AF1DA424C75A1A00E9B2FC /* Dribble-3D-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dribble-3D-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09AF1DA724C75A1A00E9B2FC /* Dribble_3D_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dribble_3D_AppApp.swift; sourceTree = "<group>"; };
 		09AF1DA924C75A1A00E9B2FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			children = (
 				09AF1DA724C75A1A00E9B2FC /* Dribble_3D_AppApp.swift */,
 				09AF1DA924C75A1A00E9B2FC /* ContentView.swift */,
+				093F5C1D24C89301006DC505 /* NewFile.swift */,
 				09AF1DAB24C75A1B00E9B2FC /* Assets.xcassets */,
 				09AF1DB024C75A1C00E9B2FC /* Info.plist */,
 				09AF1DAD24C75A1B00E9B2FC /* Preview Content */,
@@ -261,6 +264,7 @@
 			files = (
 				09AF1DAA24C75A1A00E9B2FC /* ContentView.swift in Sources */,
 				09AF1DA824C75A1A00E9B2FC /* Dribble_3D_AppApp.swift in Sources */,
+				093F5C1E24C89301006DC505 /* NewFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

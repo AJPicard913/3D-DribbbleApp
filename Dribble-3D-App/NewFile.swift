@@ -1,41 +1,48 @@
 //
-//  ContentView.swift
+//  NewFile.swift
 //  Dribble-3D-App
 //
-//  Created by AJ Picard on 7/21/20.
+//  Created by AJ Picard on 7/22/20.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct NewFile: View {
     var body: some View {
         ZStack {
-            Color(#colorLiteral(red: 0.9682741117, green: 0.9682741117, blue: 0.9682741117, alpha: 1)).edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+            
+            Color(#colorLiteral(red: 0.9590736041, green: 0.9590736041, blue: 0.9590736041, alpha: 1)).edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             
             VStack {
-                Header()
+                HeaderTwo()
+                    
                 
-                Search()
-                    .padding(.top, 10)
-                Buttons()
-                    .padding(.vertical, 20)
-                Cards()
-                    .padding(.top, 20)
-                Tabbar()
+                Searchbar()
+                    .padding(.vertical, 10)
+                
+                ButtonsTwo()
+                    .padding(.vertical, 10)
+                
+                CardsTwo()
+                    .padding(.vertical, 10)
+                    .offset(y: 20)
+                
+                TabarTwo()
                     .offset(y: 60)
             }
         }
+        
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct NewFile_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        NewFile()
     }
 }
 
-//MARK: Header
-struct Header: View {
+//MARK: HeaderTwo
+struct HeaderTwo: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
@@ -51,17 +58,17 @@ struct Header: View {
             Spacer()
             Image("Aj")
                 .resizable()
-                .frame(width: 50, height: 50)
+                .frame(width: 50, height:50)
                 .padding(.trailing, 30)
         }
     }
 }
 
-//MARK: Search
-struct Search: View {
+//MARK: SearchBar
+struct Searchbar: View {
     var body: some View {
         HStack {
-            Text("Search for 3D products")
+            Text("Search for 3D Products")
                 .foregroundColor(.gray)
                 .font(.system(size: 15))
                 .padding(.leading, 20)
@@ -70,122 +77,119 @@ struct Search: View {
                 .font(.system(size: 26, weight: .medium, design: .serif))
                 .foregroundColor(Color(#colorLiteral(red: 0.9762545228, green: 0.6769368052, blue: 0.6951140761, alpha: 1)))
                 .padding(.trailing, 20)
-            
         }
-        .frame(width: 350, height: 54)
+        .frame(width: 354, height: 54)
         .background(Color.white)
         .cornerRadius(14)
     }
 }
 
-//MARK: Buttons
-struct Buttons: View {
+//MARK: ButtonsTwo
+struct ButtonsTwo: View {
     var body: some View {
-        VStack {
-            HStack (spacing: 35) {
+        HStack (spacing: 35) {
+            VStack {
                 VStack {
-                    ZStack{
-                        Image(systemName: "clock")
-                            .font(.system(size: 24))
-                            .foregroundColor(.white)
-                    }
-                    .frame(width: 60, height: 60)
-                    .background(Color(#colorLiteral(red: 0.9762545228, green: 0.6769368052, blue: 0.6951140761, alpha: 1)))
-                    .cornerRadius(10)
-                    
-                    Text("Recent")
-                        .font(.system(size: 12, weight: .bold, design: .serif))
-                        .foregroundColor(Color(#colorLiteral(red: 0.9762545228, green: 0.6769368052, blue: 0.6951140761, alpha: 1)))
-                        .padding(.top, 10)
+                    Image(systemName: "clock")
+                        .font(.system(size: 24))
+                        .foregroundColor(.white)
                 }
+                .frame(width: 60, height: 60)
+                .background(Color(#colorLiteral(red: 0.9762545228, green: 0.6769368052, blue: 0.6951140761, alpha: 1)))
+                .cornerRadius(10)
                 
-                VStack {
-                    ZStack{
-                        Image(systemName: "flame")
-                            .font(.system(size: 24))
-                            .foregroundColor(.gray)
-                    }
-                    .frame(width: 60, height: 60)
-                    .background(Color.white)
-                    .cornerRadius(10)
-                    Text("Trending")
-                        .font(.system(size: 12, weight: .bold, design: .serif))
-                        .foregroundColor(.gray)
-                        .padding(.top, 10)
-                }
-                VStack {
-                    ZStack{
-                        Image(systemName: "crown")
-                            .font(.system(size: 24))
-                            .foregroundColor(.gray)
-                    }
-                    .frame(width: 60, height: 60)
-                    .background(Color.white)
-                    .cornerRadius(10)
-                    Text("Popular")
-                        .font(.system(size: 12, weight: .bold, design: .serif))
-                        .foregroundColor(.gray)
-                        .padding(.top, 10)
-                }
-                VStack {
-                    ZStack{
-                        Image(systemName: "diamond")
-                            .font(.system(size: 24))
-                            .foregroundColor(.gray)
-                    }
-                    .frame(width: 60, height: 60)
-                    .background(Color.white)
-                    .cornerRadius(10)
-                    Text("Premium")
-                        .font(.system(size: 12, weight: .bold, design: .serif))
-                        .foregroundColor(.gray)
-                        .padding(.top, 10)
-                }
-                
-                
+                Text("Recent")
+                    .font(.system(size: 12, weight: .bold, design: .serif))
+                    .foregroundColor(Color(#colorLiteral(red: 0.9762545228, green: 0.6769368052, blue: 0.6951140761, alpha: 1)))
+                    .padding(.top, 10)
             }
-            
+            VStack {
+                VStack {
+                    Image(systemName: "flame")
+                        .font(.system(size: 24))
+                        .foregroundColor(.gray)
+                }
+                .frame(width: 60, height: 60)
+                .background(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+                .cornerRadius(10)
+                
+                Text("Trending")
+                    .font(.system(size: 12, weight: .bold, design: .serif))
+                    .foregroundColor(.gray)
+                    .padding(.top, 10)
+            }
+            VStack {
+                VStack {
+                    Image(systemName: "crown")
+                        .font(.system(size: 24))
+                        .foregroundColor(.gray)
+                }
+                .frame(width: 60, height: 60)
+                .background(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+                .cornerRadius(10)
+                
+                Text("Popular")
+                    .font(.system(size: 12, weight: .bold, design: .serif))
+                    .foregroundColor(.gray)
+                    .padding(.top, 10)
+            }
+            VStack {
+                VStack {
+                    Image(systemName: "diamond")
+                        .font(.system(size: 24))
+                        .foregroundColor(.gray)
+                }
+                .frame(width: 60, height: 60)
+                .background(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+                .cornerRadius(10)
+                
+                Text("Premium")
+                    .font(.system(size: 12, weight: .bold, design: .serif))
+                    .foregroundColor(.gray)
+                    .padding(.top, 10)
+            }
         }
     }
 }
 
-//MARK: Cards
-struct Cards: View {
+
+//MARK: CardsTwo
+struct CardsTwo: View {
     var body: some View {
         VStack(alignment: .leading) {
+            
             Text("Recommended Products")
                 .font(.system(size: 22, weight: .bold, design: .serif))
                 .foregroundColor(Color(#colorLiteral(red: 0.9762545228, green: 0.6769368052, blue: 0.6951140761, alpha: 1)))
             
             ScrollView (.horizontal) {
-                HStack (spacing: 40) {
-                    VStack {
+                HStack (spacing: 25) {
+                    VStack{
                         Image("Geometry")
                             .resizable()
                             .aspectRatio(contentMode: .fill)
-                        VStack(alignment: .leading){
+                        VStack(alignment: .leading) {
                             Text("Geometry 3D Elements")
                                 .font(.system(size: 20, weight: .bold, design: .serif))
                                 .foregroundColor(Color(#colorLiteral(red: 0.9762545228, green: 0.6769368052, blue: 0.6951140761, alpha: 1)))
-                                .padding(.horizontal, 10)
+
                             Text("Hold up a rectangular piece of paper and ask all the students")
                                 .font(.system(size: 15, weight: .medium, design: .serif))
                                 .foregroundColor(Color(#colorLiteral(red: 0.9762545228, green: 0.6769368052, blue: 0.6951140761, alpha: 1)))
                                 .lineLimit(3)
                                 .padding(.top, 5)
-                                .padding(.leading, 10)
                                 .padding(.bottom, 15)
                         }
-                        .frame(height: 100)
+                        .frame(width: 250)
                     }
                     .frame(width: 280, height: 340)
                     .background(Color.white)
                     .cornerRadius(30)
-                    VStack {
+                    VStack{
                         Image("Abstract")
                             .resizable()
                             .aspectRatio(contentMode: .fill)
-                        VStack(alignment: .leading){
+                        VStack(alignment: .leading) {
                             Text("Abstract 3D Elements")
                                 .font(.system(size: 20, weight: .bold, design: .serif))
                                 .foregroundColor(Color(#colorLiteral(red: 0.9762545228, green: 0.6769368052, blue: 0.6951140761, alpha: 1)))
@@ -198,23 +202,21 @@ struct Cards: View {
                                 .padding(.leading, 10)
                                 .padding(.bottom, 15)
                         }
-                        .frame(height: 100)
                     }
                     .frame(width: 280, height: 340)
                     .background(Color.white)
                     .cornerRadius(30)
                 }
             }
-            .padding(.top, 10)
         }
         .padding(.leading, 30)
     }
 }
 
-//MARK: Tabbar
-struct Tabbar: View {
+//MARK: TabarTwo
+struct TabarTwo: View {
     var body: some View {
-        HStack (spacing: 60) {
+        HStack (spacing: 65) {
             VStack {
                 Image(systemName: "house")
                     .font(.system(size: 26))
